@@ -1,0 +1,31 @@
+{
+    "name": "aweingarten/pbt-launcher",
+    "description": "Provides a pbt executable for your global PATH",
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "webflo/drupal-finder": "^1.0",
+        "webmozart/path-util": "^2.3",
+        "composer/xdebug-handler": "^1.0",
+        "laravel-zero/phar-updater": "dev-main"
+    },
+    "conflict": {
+        "pbt/pbt": "*"
+    },
+    "authors": [
+        {
+            "name": "Florian Weber",
+            "email": "florian@webflo.org"
+        }
+    ],
+    "bin": [
+        "bin/pbt"
+    ],
+    "scripts": {
+        "box-install": [
+            "curl -O -L https://github.com/box-project/box/releases/download/3.11.1/box.phar"
+        ],
+        "box-compile": [
+            "php box.phar compile"
+        ]
+    }
+}
